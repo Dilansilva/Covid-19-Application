@@ -32,7 +32,8 @@ app.get('/covid',(req,res) => {
            confirmed: confirmed,
            deaths: deths,
            recovered: recovered,
-           active: active
+           active: active,
+           country: req.query.search
        });
     });
 });

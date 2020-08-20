@@ -15,7 +15,8 @@ const utils = (country, callback) => {
                     confirmed: res.body[res.body.length - 1].Confirmed,
                     deths: res.body[res.body.length - 1].Deaths,
                     recovered: res.body[res.body.length - 1].Recovered,
-                    active: res.body[res.body.length -1].Active
+                    active: res.body[res.body.length -1].Active,
+                    country: res.body[res.body.length -1].Country
             });
         }
     });
