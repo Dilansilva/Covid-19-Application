@@ -20,20 +20,30 @@ app.get('/covid',(req,res) => {
         })
     }
 
-    utils(req.query.search, (error, { confirmed,deaths,recovered,active} = {}) => {
+    utils(req.query.search, (error, { confirmed,
+                                        deaths,
+                                            recovered,
+                                                active,
+                                            todayconfirmed,
+                                        todaydeaths,
+                                    todayrecovered
+                                                } = {}) => {
         
        if( error ) {
            return res.send({
                error:error
             });
        } 
-
+       
        res.send({
            confirmed: confirmed,
            deaths: deaths,
            recovered: recovered,
            active: active,
-           country: req.query.search    
+           country: req.query.search,
+           todayconfirmed: todayconfirmed,
+           todaydeaths: todaydeaths,
+           todayrecovered: todayrecovered
        });
     });
 });

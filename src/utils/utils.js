@@ -16,7 +16,12 @@ const utils = (country, callback) => {
                     deths: res.body[res.body.length - 1].Deaths,
                     recovered: res.body[res.body.length - 1].Recovered,
                     active: res.body[res.body.length -1].Active,
-                    country: res.body[res.body.length -1].Country
+                    country: res.body[res.body.length -1].Country,
+                    
+                    todayconfirmed: ((res.body[res.body.length - 1].Confirmed)-(res.body[res.body.length - 2].Confirmed)),
+                    todaydeaths: ((res.body[res.body.length - 1].Deaths)-(res.body[res.body.length - 2].Deaths)),
+                    todayrecovered: ((res.body[res.body.length - 1].Recovered)-(res.body[res.body.length - 2].Recovered)),
+
             });
         }
     });
