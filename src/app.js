@@ -4,7 +4,7 @@ const request = require('request');
 const utils = require('./utils/utils');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const publicDirectryPath = path.join(__dirname, '../public');
 app.use(express.static(publicDirectryPath))
@@ -53,5 +53,5 @@ app.get('*', (req,res) => {
 });
 
 app.listen(port, () => {
-    console.log('app is running');
+    console.log('app is running' + port);
 });

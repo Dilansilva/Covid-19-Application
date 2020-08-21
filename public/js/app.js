@@ -17,7 +17,7 @@ const error = document.querySelector('#error');
  
 document.addEventListener("DOMContentLoaded", () => { //This function calls when page load
     error.textContent = "Loading......Please wait!";
-    fetch('http://localhost:3000/covid?search=sri-lanka').then( (response) => {
+    fetch('/covid?search=sri-lanka').then( (response) => {
         response.json().then( (data) => {
             
             if(data.error) {
@@ -47,7 +47,7 @@ covidForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const location =  search.value;
     error.textContent = "Loading......Please Wait!";
-    fetch('http://localhost:3000/covid?search='+location+'').then((response) => {
+    fetch('/covid?search='+location+'').then((response) => {
         response.json().then( (data) => {
             
             if(data.error) {
