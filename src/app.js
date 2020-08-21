@@ -20,7 +20,7 @@ app.get('/covid',(req,res) => {
         })
     }
 
-    utils(req.query.search, (error, { confirmed,deths,recovered,active} = {}) => {
+    utils(req.query.search, (error, { confirmed,deaths,recovered,active} = {}) => {
         
        if( error ) {
            return res.send({
@@ -30,7 +30,7 @@ app.get('/covid',(req,res) => {
 
        res.send({
            confirmed: confirmed,
-           deaths: deths,
+           deaths: deaths,
            recovered: recovered,
            active: active,
            country: req.query.search    
