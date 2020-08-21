@@ -10,7 +10,7 @@ const country = document.querySelector('#country');
 
 const todayconfirmed= document.querySelector('#todayconfirmed');
 const todaydeaths = document.querySelector('#todaydeaths');
-const todayrecoverd = document.querySelector('#todayrecoverd');
+const todayrecovered = document.querySelector('#todayrecovered');
 const todayactive = document.querySelector('#todayactive');
  
 document.addEventListener("DOMContentLoaded", () => { //This function calls when page load
@@ -23,9 +23,9 @@ document.addEventListener("DOMContentLoaded", () => { //This function calls when
 
             todayconfirmed.textContent = data.todayconfirmed,
             todaydeaths.textContent = data.todaydeaths,
-            todayrecoverd.textContent = data.todayrecoverd,
+            todayrecovered.textContent = data.todayrecovered,
             todayactive.textContent = data.todayactive
-
+            console.log(data);
         })
     });
 });
@@ -47,7 +47,7 @@ covidForm.addEventListener('submit', (e) => {
 
                 todayconfirmed.textContent = data.todayconfirmed,
                 todaydeaths.textContent = data.todaydeaths,
-                todayrecoverd.textContent = data.todayrecoverd,
+                todayrecovered.textContent = data.todayrecovered,
                 todayactive.textContent = data.todayactive
             }
         })
