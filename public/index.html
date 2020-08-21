@@ -12,31 +12,65 @@
         <!--Chart.js-->
     <!-- //<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script> -->
     
-       
+    <link rel="stylesheet" href="./css/styles.css">
     </head>
     <body>
         
         <div class="container-fluid">
-            <h1><b>COVID-19</b></h1>
+            <h1 class="textcenter"><b>COVID-19</b>: Live Situation: <span id="country"></span></h1>
+                <br>
                 <div class="container">
                     <form>
                         <input placeholder="Enter Location here">
-                       
                         <button class="btn btn-primary">Search</button>
                       </form> 
                 </div>
-
+                <br><br>
                 <div class="container">
                     <div class="row">
-                      <div class="col-sm">
-                        One of three columns
+                      <div class="col-sm-6">
+                        <div class="outliner">
+                            <h2 class="textcenter">Total Figures</h2>
+                            <div class="totalconfirmedCases">
+                                <h5 class="textcenter" id="confirmed">Confirmed Cases:</h5>
+                            </div>
+
+                            <div class="deaths">
+                                <h5 class="textcenter">Deaths:</h5>
+                            </div>
+
+                            <div class="recovered">
+                                <h5 class="textcenter">Recovered:</h5>
+                            </div>
+
+                            <div class="active">
+                                <h5 class="textcenter">Active Cases:</h5>
+                            </div>
+                        </div>
                       </div>
-                      <div class="col-sm">
-                        One of three columns
+                      <div class="col-sm-6">
+                            <div class="outliner">
+                                <h2 class="textcenter">Daily Figures</h2>
+                                <div class="todaytotalconfirmedCases">
+                                    <h5 class="textcenter">Confirmed Cases:</h5>
+                                </div>
+        
+                                <div class="todaydeaths">
+                                    <h5 class="textcenter">Deaths:</h5>
+                                </div>
+        
+                                <div class="todayrecoverd">
+                                    <h5 class="textcenter">Recovered:</h5>
+                                </div>
+        
+                                <div class="todayactive">
+                                    <h5 class="textcenter">Active Cases:</h5>
+                                </div>
+                            </div>
                       </div>
-                      <div class="col-sm">
+                      <!-- <div class="col-sm">
                         One of three columns
-                      </div>
+                      </div> -->
                     </div>
                 </div>
         </div>
