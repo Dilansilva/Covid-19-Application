@@ -21,7 +21,7 @@ const utils = (country, callback) => {
                     todayconfirmed: ((res.body[res.body.length - 1].Confirmed)-(res.body[res.body.length - 2].Confirmed)),
                     todaydeaths: ((res.body[res.body.length - 1].Deaths)-(res.body[res.body.length - 2].Deaths)),
                     todayrecovered: ((res.body[res.body.length - 1].Recovered)-(res.body[res.body.length - 2].Recovered)),
-
+                    
             });
         }
     });

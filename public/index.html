@@ -13,17 +13,19 @@
     <!-- //<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script> -->
     
     <link rel="stylesheet" href="./css/styles.css">
+
     </head>
     <body>
         
         <div class="container-fluid">
-            <h1 class="textcenter"><b>COVID-19</b>: Live Situation: <span id="country"></span></h1>
+            <h1 class="textcenter"><b>COVID-19</b>: Live Situation: <b><span id="country"></span></b></h1>
                 <br>
                 <div class="container">
                     <form>
-                        <input placeholder="Enter Location here">
+                        <input placeholder="Enter Country here">
                         <button class="btn btn-primary">Search</button>
-                      </form> 
+                    </form> 
+                      <b class="textcenter"><p id="error"></p></b>
                 </div>
                 <br><br>
                 <div class="container">
@@ -65,8 +67,8 @@
                                     <h5 class="textcenter">Recovered: <span id="todayrecovered"></span></h5>
                                 </div>
                                     <br>
-                                <div class="todayactive">
-                                    <h5 class="textcenter textwhite">Active Cases: <sapn id="todayactive"></sapn></h5>
+                                <div>
+                                    <h5 class="textcenter textwhite">Active Cases: <sapn id="active"></sapn></h5>
                                 </div> <br><br><br>
                             </div>
                       </div>
