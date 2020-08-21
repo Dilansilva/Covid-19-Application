@@ -16,7 +16,7 @@ app.get('',(req,res) => {
 app.get('/covid',(req,res) => {
     if (!req.query.search) {
         return res.send({
-            error: 'You must provide an address!'
+            error: 'Unable to find location!try another'
         })
     }
 
@@ -33,7 +33,7 @@ app.get('/covid',(req,res) => {
            deaths: deths,
            recovered: recovered,
            active: active,
-           country: req.query.search
+           country: req.query.search    
        });
     });
 });

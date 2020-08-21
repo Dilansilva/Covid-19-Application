@@ -1,5 +1,5 @@
 const request = require('request');
-const { json } = require('express');
+const express = require('express');
 
 const utils = (country, callback) => {
     const URL = 'https://api.covid19api.com/total/country/'+country+'';
